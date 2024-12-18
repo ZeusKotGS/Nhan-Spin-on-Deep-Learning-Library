@@ -37,7 +37,7 @@ class Linear(Layer):
         #inputs will be (batch_size, input_size)
         # outputs will be (batch_size, output_size)
         super().__init__()
-        self.params["w"] = np.rando.randn(input_size, output_size)
+        self.params["w"] = np.random.randn(input_size, output_size)
         self.params["b"] = np.random.randn(output_size)
 
     def forward(self, inputs: Tensor) -> Tensor:
@@ -72,6 +72,7 @@ class Activation(Layer):
     """
 
     def __init__(self, f: F, f_prime: F) -> None:
+        super().__init__()
         self.f = f
         self.f_prime = f_prime
 
