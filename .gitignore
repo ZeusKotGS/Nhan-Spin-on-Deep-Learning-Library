@@ -163,3 +163,4 @@ cython_debug/
 
 # test files
 xor.py
+fizzbuzz.py
